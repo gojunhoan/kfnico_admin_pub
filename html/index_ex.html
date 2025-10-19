@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>신용등급 · 예치기준금액 | Admin</title>
+
+  <!-- AdminLTE 3 + Bootstrap 4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"/>
+
+  <style>
+    /* 공통 */
+    .table-form td{vertical-align:middle;}
+    .table-form th{
+      background:#f8f9fa;
+      font-weight:600;
+    }
+    .btn-file{position:relative;overflow:hidden}
+    .btn-file input[type=file]{position:absolute;top:0;right:0;min-width:100%;min-height:100%;opacity:0;cursor:pointer}
+    .file-pill{display:flex;gap:.5rem;align-items:center}
+    .file-pill .badge{font-weight:500}
+    .section-dashed{border:2px dashed #ff9f43;border-radius:.5rem;padding:1rem;margin-top:1rem}
+    .num{text-align:right}
+    .table-grid th,.table-grid td{vertical-align:middle}
+    .table-grid th{white-space:nowrap}
+
+    /* 하단 고정 액션바 */
+    .actionbar {
+      position: sticky; /* 페이지 끝에서도 보이도록 */
+      bottom: 0;
+      z-index: 1030;
+      background: #fff;
+      border-top: 1px solid rgba(0,0,0,.125);
+      box-shadow: 0 -4px 10px rgba(0,0,0,.03);
+    }
+    .actionbar .container-fluid{padding:.75rem 1rem;}
+    body { padding-bottom: 72px; } /* iOS 등에서 가려짐 방지 여유 */
+  </style>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Header -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a></li>
+      <li class="nav-item d-none d-sm-inline-block"><a href="#" class="nav-link">Forms</a></li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">버전 선택</li>
+      <li class="nav-item ml-2">
+        <select class="form-control form-control-sm" style="min-width:160px">
+          <option>v1.0 (기본)</option>
+          <option>v0.9</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Sidebar (간단 목업) -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="#" class="brand-link"><span class="brand-text font-weight-light">AdminLTE 3</span></a>
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+          <li class="nav-item"><a href="#" class="nav-link active"><i class="nav-icon fas fa-list"></i><p>기초정보 관리</p></a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <div class="content-wrapper">
+
+    <!-- 신용등급 섹션 -->
+    <section class="content pt-3">
+      <div class="container-fluid">
+        <h2 class="mb-3">신용등급</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body p-0">
+                <table class="table table-sm table-bordered m-0 table-form">
+                  <tbody>
+                  <tr>
+                    <td>신용평가 기관 - 국문</td>
+                    <td><input class="form-control" value="무디스"></td>
+                    <td>신용평가 기관 - 영문</td>
+                    <td><input class="form-control" value="Moody's Ratings"></td>
+                  </tr>
+                  <tr>
+                    <td>신용평가 기관 로고</td>
+                    <td colspan="3">
+                      <div class="d-flex align-items-center">
+                        <span class="btn btn-default btn-file mr-2">찾아보기 <input type="file" id="logo1"></span>
+                        <div class="file-pill">
+                          <span class="badge badge-light" id="logo1Name">logo.jpg</span>
+                          <button class="btn btn-xs btn-outline-secondary" id="logo1Remove">X</button>
+                        </div>
+                      </div>
+                      <small class="text-muted d-block mt-1">신용평가 기관 로고 이미지 설명</small>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>타이틀</td>
+                    <td colspan="3"><input class="form-control" value="2014년 국내 건설보증기관 최초로 국제신용등급을 취득"></td>
+                  </tr>
+                  <tr>
+                    <td>설명</td>
+                    <td colspan="3">
+                      <textarea class="form-control" rows="3">세계적 신용평가사 무디스(Moody’s)는 전문건설공제조합의 보증금지급능력(IFSR)에 ‘A3 안정적’ 등급을 부여했습니다. 조합은 2014년 국내 건설보증기관 최초로 국제신용등급을 취득한 이후, 현재까지 우수한 보증금·보험금 지급능력을 유지하고 있습니다.</textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>등급</td>
+                    <td style="width:25%"><input class="form-control" value="A+"></td>
+                    <td>전망</td>
+                    <td><input class="form-control" value="안정적(Stable)"></td>
+                  </tr>
+                  <tr>
+                    <td>최종평가(검토)일</td>
+                    <td><input type="date" class="form-control" value="2025-06-10"></td>
+                    <td>발표자료</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="btn btn-default btn-file mr-2">찾아보기 <input type="file" id="file1"></span>
+                        <div class="file-pill">
+                          <span class="badge badge-light" id="file1Name">발표자료.pdf</span>
+                          <button class="btn btn-xs btn-outline-secondary" id="file1Remove">X</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 추가 섹션(3-1) -->
+            <div id="extraContainer"></div>
+            <div class="d-flex mb-4">
+              <button class="btn btn-outline-primary" id="btnAdd">추가</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 예치기준금액 섹션 -->
+    <section class="content pt-0">
+      <div class="container-fluid">
+        <h2 class="mb-3">예치기준금액</h2>
+        <div class="card">
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table table-bordered m-0 table-grid" id="tbl">
+                <thead class="thead-light">
+                  <tr>
+                    <th style="width:18%">업종</th>
+                    <th style="width:12%">법인/개인</th>
+                    <th style="width:12%">신용등급</th>
+                    <th style="width:10%">좌수</th>
+                    <th style="width:18%">1좌당 금액</th>
+                    <th>예치금</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>지반포장외</td><td>법인/개인</td><td>C</td>
+                    <td class="num" data-field="seats">53</td>
+                    <td><input class="form-control num seat-amount" value="951,294"></td>
+                    <td><input class="form-control num dep" value="50,418,582"></td>
+                  </tr>
+                  <tr>
+                    <td>철도, 강구조</td><td>법인/개인</td><td>CC이상</td>
+                    <td class="num" data-field="seats">43</td>
+                    <td><input class="form-control num seat-amount" value="951,294"></td>
+                    <td><input class="form-control num dep" value="40,905,642"></td>
+                  </tr>
+                  <tr>
+                    <td>개인</td><td>개인</td><td>C</td>
+                    <td class="num" data-field="seats">106</td>
+                    <td><input class="form-control num seat-amount" value="951,294"></td>
+                    <td><input class="form-control num dep" value="100,837,164"></td>
+                  </tr>
+                  <tr>
+                    <td>시설물</td><td>법인/개인</td><td>C</td>
+                    <td class="num" data-field="seats">79</td>
+                    <td><input class="form-control num seat-amount" value="951,294"></td>
+                    <td><input class="form-control num dep" value="75,152,226"></td>
+                  </tr>
+                  <tr>
+                    <td>가스누방</td><td>법인/개인</td><td>-</td>
+                    <td class="num" data-field="seats">43</td>
+                    <td><input class="form-control num seat-amount" value="951,294"></td>
+                    <td><input class="form-control num dep" value="40,905,642"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="form-row">
+              <div class="form-group col-sm-6 col-md-3">
+                <label>1좌당 금액</label>
+                <input id="globalSeatAmount" class="form-control num" value="951,294">
+                <small class="text-muted">입력 시 표의 1좌당 금액(각 행) 일괄 반영</small>
+              </div>
+              <div class="form-group col-sm-6 col-md-3">
+                <label>적용 일자</label>
+                <input type="date" class="form-control" value="2025-01-01">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 하단 고정 저장 버튼 -->
+    <div class="actionbar">
+      <div class="container-fluid d-flex justify-content-end">
+        <button class="btn btn-primary" id="btnSaveAll">
+          <i class="fas fa-save mr-1"></i>저장
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /.content-wrapper -->
+</div>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
+<script>
+  /* ====== 신용등급 파일명 표기/제거 ====== */
+  function wireFileRow(inputId, nameId, removeId){
+    const file = document.getElementById(inputId);
+    const name = document.getElementById(nameId);
+    const rm = document.getElementById(removeId);
+    if(file){
+      file.addEventListener('change', e=>{
+        name.textContent = e.target.files?.[0]?.name || '파일 미선택';
+      });
+    }
+    if(rm){
+      rm.addEventListener('click', ()=>{
+        name.textContent='파일 미등록';
+        if(file) file.value='';
+      });
+    }
+  }
+  wireFileRow('logo1','logo1Name','logo1Remove');
+  wireFileRow('file1','file1Name','file1Remove');
+
+  // 추가 섹션(3-1) 템플릿
+  function sectionTemplate(idx){
+    return `
+    <div class="card section-dashed" data-idx="${idx}">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <strong>신용평가 기관 추가 (${idx})</strong>
+        <button class="btn btn-sm btn-outline-danger btnRemove">삭제</button>
+      </div>
+      <div class="card-body p-0">
+        <table class="table table-sm table-bordered m-0 table-form">
+          <tbody>
+          <tr>
+            <td>신용평가 기관 - 국문</td>
+            <td><input class="form-control"></td>
+            <td>신용평가 기관 - 영문</td>
+            <td><input class="form-control"></td>
+          </tr>
+          <tr>
+            <td>신용평가 기관 로고</td>
+            <td colspan="3">
+              <span class="btn btn-default btn-file mr-2">찾아보기 <input type="file"></span>
+              <span class="badge badge-light">파일 미등록</span>
+            </td>
+          </tr>
+          <tr>
+            <td>타이틀</td>
+            <td colspan="3"><input class="form-control"></td>
+          </tr>
+          <tr>
+            <td>설명</td>
+            <td colspan="3"><textarea class="form-control" rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <td>등급</td>
+            <td><input class="form-control"></td>
+            <td>전망</td>
+            <td><input class="form-control"></td>
+          </tr>
+          <tr>
+            <td>최종평가(검토)일</td>
+            <td><input type="date" class="form-control"></td>
+            <td>발표자료</td>
+            <td><span class="btn btn-default btn-file mr-2">찾아보기 <input type="file"></span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+  }
+
+  let extraIdx = 1;
+  document.getElementById('btnAdd').addEventListener('click', ()=>{
+    $('#extraContainer').append(sectionTemplate(extraIdx++));
+  });
+  $('#extraContainer').on('click','.btnRemove', function(){
+    $(this).closest('.card').remove();
+  });
+
+  /* ====== 예치기준금액 계산 ====== */
+  const toNum = v => Number(String(v).replace(/[^\d.-]/g,'')||0);
+  const fmt = n => n.toLocaleString();
+
+  function recalcRow(tr){
+    const seatAmt = toNum($(tr).find('.seat-amount').val());
+    const dep = toNum($(tr).find('.dep').val());
+    const seats = seatAmt>0 ? Math.round(dep / seatAmt) : 0;
+    $(tr).find('[data-field="seats"]').text(fmt(seats));
+  }
+
+  $('#tbl').on('input', '.dep, .seat-amount', function(){
+    const cur = toNum(this.value);
+    this.value = cur ? fmt(cur) : '';
+    recalcRow($(this).closest('tr'));
+  });
+
+  $('#globalSeatAmount').on('input', function(){
+    const val = fmt(toNum(this.value));
+    this.value = val;
+    $('.seat-amount').val(val).each(function(){ recalcRow($(this).closest('tr')); });
+  });
+
+  $('#tbl tbody tr').each(function(){ recalcRow(this); });
+
+  /* ====== 저장(하단 고정) ====== */
+  document.getElementById('btnSaveAll').addEventListener('click', ()=>{
+    // 실제 저장 로직 연동 시 이 영역에서 FormData 수집/전송 처리
+    alert('저장되었습니다. (통합 화면)');
+  });
+</script>
+</body>
+</html>
