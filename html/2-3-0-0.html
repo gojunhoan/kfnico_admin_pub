@@ -382,7 +382,7 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-              <div class="col-sm-10"><h3 class="mb-0">신용등급</h3></div>
+              <div class="col-sm-10"><h3 class="mb-0">상품약관</h3></div>
               <div class="col-sm-2">
               </div>
             </div>
@@ -394,8 +394,7 @@
         <!--begin::App Content-->
         <div class="app-content">
           <!--begin::Container-->
-          <div class="container-fluid">
-            
+          <div class="container-fluid">            
             <!--begin::Row-->
             <div class="row">
               <!--begin::Col-->
@@ -403,7 +402,7 @@
                 <div class="card card-secondary card-outline mb-4">
                   <div class="card-header">
                     <div class="row">
-                      <div class="card-title col-sm-10">정관</div>
+                      <div class="card-title col-sm-10">업무거래기본약관</div>
                       <div class="col-sm-2">                      
                       </div>
                     </div>
@@ -416,7 +415,7 @@
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th>정관 파일 첨부</th>
+                          <th>업무거래기본약관</th>
                           <td colspan="3">                   
                             <div class="input-group">
                               <input type="file" class="form-control" id="inputGroupFile02">
@@ -439,246 +438,289 @@
               </div>
               <!--end::Col-->
             </div>
-            <!--end::Row-->
+            <!--end::Row-->      
             <!--begin::Row-->
             <div class="row">
               <!--begin::Col-->
-              <div class="col-lg-12">      
-                <div class="card card-outline mb-4">
+              <div class="col-lg-12">   
+                <div class="card mb-4">
                   <div class="card-header">
-                    <div class="row">
-                    <div class="card-title col-sm-10">신용등급</div>
-                    <div class="col-sm-2">                      
-                      <select class="form-select" id="validationCustom04">
-                        <option selected="" disabled="" value="">버전 선택</option>
-                        <option></option>
-                      </select>
-                    </div>
+                    <h3 class="card-title">상품약관</h3>
+                    <div class="card-tools">                      
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-1" type="search" placeholder="검색어 입력" aria-label="Search"/>
+                        <button class="btn btn-outline-secondary" type="submit">검색</button>
+                      </form>
                     </div>
                   </div>
-                  <div class="card-body">   
-                    <div class="col-md-12 mb-5">
-                      <button type="submit" class="btn btn-danger float-end mb-2">삭제</button>                 
-                      <table class="table table-form">
-                        <colgroup>
-                          <col style="width: 200px">
-                          <col style="width: 500px">
-                          <col style="width: 200px">
-                          <col style="width: auto">
-                        </colgroup>
-                        <tbody>
+                  <!-- /.card-header -->
+                  <div class="card-body p-0">
+                    <table class="table">
+                      <colgroup>
+                        <col style="width: 30px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: 100px;" />
+                        <col style="width: auto;" />
+                        <col style="width: 180px;" />
+                        <col style="width: 80px;" />
+                        <col style="width: 100px;" />
+                        <col style="width: 100px;" />
+                        <col style="width: 100px;" />
+                      </colgroup>
+                      <thead>
                         <tr>
-                          <th>신용평가 기관 - 국문</th>
-                          <td><input class="form-control" value="무디스"></td>
-                          <th>신용평가 기관 - 영문</th>
-                          <td><input class="form-control" value="Moody's Ratings"></td>
-                        </tr>
-                        <tr>
-                          <th>신용평가 기관 로고</th>
-                          <td>                   
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile02">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile02">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove">X</button>
+                          <th>
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                              <label class="form-check-label visually-hidden" for="checkDefault">
+                                전체선택
+                              </label>
                             </div>
-                            <small class="text-muted d-block mt-1">신용평가 기관 로고 이미지 설명</small>
-                          </td>
-                          <th>신용평가 기관 로고 이미지 설명</th>
-                          <td><input class="form-control" value="무디스 기관 로고"></td>
+                          </th>
+                          <th>No</th>
+                          <th>상품분류</th>
+                          <th>상품명</th>
+                          <th>가입기간</th>
+                          <th>언어</th>
+                          <th>작성자</th>
+                          <th>등록일</th>
+                          <th>수정일자</th>
                         </tr>
-                        <tr>
-                          <th>타이틀</th>
-                          <td colspan="3"><input class="form-control" value="2014년 국내 건설보증기관 최초로 국제신용등급을 취득"></td>
-                        </tr>
-                        <tr>
-                          <th>설명</th>
-                          <td colspan="3">
-                            <textarea class="form-control" rows="3">세계적 신용평가사 무디스(Moody’s)는 전문건설공제조합의 보증금지급능력(IFSR)에 ‘A3 안정적’ 등급을 부여했습니다. 조합은 2014년 국내 건설보증기관 최초로 국제신용등급을 취득한 이후, 현재까지 우수한 보증금·보험금 지급능력을 유지하고 있습니다.</textarea>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>등급</th>
-                          <td style="width:25%"><input class="form-control" value="A+"></td>
-                          <th>전망</th>
-                          <td><input class="form-control" value="안정적(Stable)"></td>
-                        </tr>
-                        <tr>
-                          <th>최종평가(검토)일</th>
-                          <td><input type="date" class="form-control" value="2025-06-10"></td>
-                          <th>발표자료</th>
-                          <td>                          
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile02">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile02">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove">X</button>
+                      </thead>
+                      <tbody>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault1">
+                              <label class="form-check-label visually-hidden" for="checkDefault1">
+                                선택
+                              </label>
                             </div>
                           </td>
-                        </tr>
-                        </tbody>
-                      </table>
-                    </div> 
-                    <div class="col-md-12">
-                      <button type="submit" class="btn btn-danger float-end mb-2">삭제</button>                 
-                      <table class="table table-form">
-                        <colgroup>
-                          <col style="width: 200px">
-                          <col style="width: 500px">
-                          <col style="width: 200px">
-                          <col style="width: auto">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                          <th>신용평가 기관 - 국문</th>
-                          <td><input class="form-control" value="무디스"></td>
-                          <th>신용평가 기관 - 영문</th>
-                          <td><input class="form-control" value="Moody's Ratings"></td>
-                        </tr>
-                        <tr>
-                          <th>신용평가 기관 로고</th>
-                          <td>                   
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile021">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile021">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove1">X</button>
-                            </div>
-                            <small class="text-muted d-block mt-1">신용평가 기관 로고 이미지 설명</small>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
                           </td>
-                          <th>신용평가 기관 로고 이미지 설명</th>
-                          <td><input class="form-control" value="무디스 기관 로고"></td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
                         </tr>
-                        <tr>
-                          <th>타이틀</th>
-                          <td colspan="3"><input class="form-control" value="2014년 국내 건설보증기관 최초로 국제신용등급을 취득"></td>
-                        </tr>
-                        <tr>
-                          <th>설명</th>
-                          <td colspan="3">
-                            <textarea class="form-control" rows="3">세계적 신용평가사 무디스(Moody’s)는 전문건설공제조합의 보증금지급능력(IFSR)에 ‘A3 안정적’ 등급을 부여했습니다. 조합은 2014년 국내 건설보증기관 최초로 국제신용등급을 취득한 이후, 현재까지 우수한 보증금·보험금 지급능력을 유지하고 있습니다.</textarea>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>등급</th>
-                          <td style="width:25%"><input class="form-control" value="A+"></td>
-                          <th>전망</th>
-                          <td><input class="form-control" value="안정적(Stable)"></td>
-                        </tr>
-                        <tr>
-                          <th>최종평가(검토)일</th>
-                          <td><input type="date" class="form-control" value="2025-06-10"></td>
-                          <th>발표자료</th>
-                          <td>                          
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile022">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile022">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove2">X</button>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault12">
+                              <label class="form-check-label visually-hidden" for="checkDefault12">
+                                선택
+                              </label>
                             </div>
                           </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
                         </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault13">
+                              <label class="form-check-label visually-hidden" for="checkDefault13">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault1">
+                              <label class="form-check-label visually-hidden" for="checkDefault1">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault14">
+                              <label class="form-check-label visually-hidden" for="checkDefault14">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault15">
+                              <label class="form-check-label visually-hidden" for="checkDefault15">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault16">
+                              <label class="form-check-label visually-hidden" for="checkDefault16">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault17">
+                              <label class="form-check-label visually-hidden" for="checkDefault17">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault18">
+                              <label class="form-check-label visually-hidden" for="checkDefault18">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="text-center">                            
+                            <div class="form-check mb-0">
+                              <input class="form-check-input" type="checkbox" value="" id="checkDefault19">
+                              <label class="form-check-label visually-hidden" for="checkDefault19">
+                                선택
+                              </label>
+                            </div>
+                          </td>
+                          <td class="text-center">999</td>
+                          <td class="text-center">보증</td>
+                          <td>
+                            <a href="#">계약보증 약관(민간채권용)</a>
+                          </td>
+                          <td class="text-center">2017.8.16 ~ 2018.9.16</td>
+                          <td class="text-center">국문</td>
+                          <td class="text-center">관리자ID</td>
+                          <td class="text-center">2025.01.01</td>
+                          <td class="text-center">2025.01.01</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <div class="card-footer d-md-flex">
+                  <!-- /.card-body -->
+                  <div class="card-footer">
+                    <div class="d-md-flex">
                       <div class="col-sm-6">
-                        <button type="submit" class="btn btn-secondary">추가</button>
+                        <button type="submit" class="btn btn-danger">삭제</button>       
                       </div>
-                      <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">                        
-                        <button type="submit" class="btn btn-secondary">미리보기</button>
-                        <button type="submit" class="btn btn-primary">저장</button>
+                      <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">        
+                        <button type="submit" class="btn btn-primary">등록</button>
                       </div>
+                    </div>
+                    <div class="d-md-flex justify-content-md-center">
+                      <nav aria-label="Page navigation">
+                        <ul class="pagination  pagination-sm">
+                          <li class="page-item"><a class="page-link" href="#">«</a></li>
+                          <li class="page-item"><a class="page-link" href="#">«</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">»</a></li>
+                          <li class="page-item"><a class="page-link" href="#">»</a></li>
+                        </ul>
+                      </nav>
+                    </div>
                   </div>
-                </div>         
+                  <!-- /.card-footer -->
+                </div>
               </div>
               <!--end::Col-->
             </div>
             <!--end::Row-->
-            <!--begin::Row-->
-            <div class="row">
-              <!-- Start col -->
-              <div class="col-lg-12">
-                <!-- 예치기준금액 섹션 -->                  
-                <div class="card card-outline mb-4">
-                  <div class="card-header">
-                    <div class="row">
-                    <div class="card-title col-sm-10">예치기준금액</div>
-                    <div class="col-sm-2">                      
-                      <select class="form-select" id="validationCustom044">
-                        <option selected="" disabled="" value="">버전 선택</option>
-                        <option></option>
-                      </select>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table table-bordered m-0 table-grid" id="tbl">
-                        <thead class="thead-light">
-                          <tr>
-                            <th style="width:18%">업종</th>
-                            <th style="width:12%">법인/개인</th>
-                            <th style="width:12%">신용등급</th>
-                            <th style="width:10%">좌수</th>
-                            <th style="width:18%">1좌당 금액</th>
-                            <th>예치금</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>지반포장외</td><td>법인/개인</td><td>C</td>
-                            <td class="num">53</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="50,418,582"></td>
-                          </tr>
-                          <tr>
-                            <td>철도, 강구조</td><td>법인/개인</td><td>CC이상</td>
-                            <td class="num">43</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="40,905,642"></td>
-                          </tr>
-                          <tr>
-                            <td>개인</td><td>개인</td><td>C</td>
-                            <td class="num">106</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="100,837,164"></td>
-                          </tr>
-                          <tr>
-                            <td>시설물</td><td>법인/개인</td><td>C</td>
-                            <td class="num">79</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="75,152,226"></td>
-                          </tr>
-                          <tr>
-                            <td>가스누방</td><td>법인/개인</td><td>-</td>
-                            <td class="num">43</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="40,905,642"></td>
-                          </tr>
-                        </tbody>
-                      </table>     
-                    </div>                 
-                    <div class="form-row d-md-flex gap-sm-2 mt-3">
-                      <div class="form-group col-sm-6 col-md-3">
-                        <label class="form-label">1좌당 금액</label>
-                        <input id="globalSeatAmount" class="form-control num" value="951,294">
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3">
-                        <label class="form-label">적용 일자</label>
-                        <input type="date" class="form-control" value="2025-01-01">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer d-md-flex">
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">            
-                      <button type="submit" class="btn btn-primary">저장</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.Start col -->
-            </div>
-            <!-- /.row (main row) -->
           </div>
           <!--end::Container-->
         </div>

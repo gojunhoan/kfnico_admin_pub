@@ -382,7 +382,7 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-              <div class="col-sm-10"><h3 class="mb-0">신용등급</h3></div>
+              <div class="col-sm-10"><h3 class="mb-0">서식</h3></div>
               <div class="col-sm-2">
               </div>
             </div>
@@ -395,34 +395,257 @@
         <div class="app-content">
           <!--begin::Container-->
           <div class="container-fluid">
-            
-            <!--begin::Row-->
-            <div class="row">
-              <!--begin::Col-->
-              <div class="col-lg-12">      
-                <div class="card card-secondary card-outline mb-4">
+            <ul class="nav nav-tabs flex-wrap" role="tablist">
+              <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#t1" type="button" role="tab">1.신용평가</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t2" type="button" role="tab">2. 보증신청서</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t3" type="button" role="tab">3. 보증관련</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t4" type="button" role="tab">4.공제</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t5" type="button" role="tab">5.융자</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t6" type="button" role="tab">6. 약정</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t7" type="button" role="tab">7. 출자</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t8" type="button" role="tab">8. 보증금 청구서</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t9" type="button" role="tab">9. 정보수집 동의서</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t10" type="button" role="tab">10. 제증명</button></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="t1" role="tabpanel">                    
+                <div class="card mt-4">
                   <div class="card-header">
                     <div class="row">
                       <div class="card-title col-sm-10">정관</div>
-                      <div class="col-sm-2">                      
+                      <div class="col-sm-2">                                                   
+                        <select class="form-select" id="validationCustom04">
+                          <option selected="" disabled="" value="">버전 선택</option>
+                          <option></option>
+                        </select>                
                       </div>
                     </div>
                   </div>
                   <div class="card-body">                    
                     <table class="table table-form">
                       <colgroup>
-                        <col style="width: 200px">
+                        <col style="width: 60%">
                         <col style="width: auto">
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th>정관 파일 첨부</th>
-                          <td colspan="3">                   
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
                             <div class="input-group">
                               <input type="file" class="form-control" id="inputGroupFile02">
                               <label class="input-group-text visually-hidden" for="inputGroupFile02">파일 선택</label>                              
                               <button class="btn btn-xs btn-outline-secondary" id="file1Remove">X</button>
                             </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile021">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile021">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove1">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile022">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile022">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove2">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <button type="submit" class="btn btn-sm btn-secondary">추가</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>     
+                  </div>
+                  <div class="card-footer d-md-flex">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">    
+                      <button type="submit" class="btn btn-secondary">미리보기</button>           
+                      <button type="submit" class="btn btn-primary">저장</button>
+                    </div>
+                  </div>
+                </div>         
+              </div>
+              <div class="tab-pane fade" id="t2" role="tabpanel">               
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="card-title col-sm-10">2. 보증신청서</div>
+                      <div class="col-sm-2">                                                   
+                        <select class="form-select" id="validationCustom041">
+                          <option selected="" disabled="" value="">버전 선택</option>
+                          <option></option>
+                        </select>                
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">                    
+                    <table class="table table-form">
+                      <colgroup>
+                        <col style="width: 60%">
+                        <col style="width: auto">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 입찰보증신청서">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile0212">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile0212">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove12">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <button type="submit" class="btn btn-sm btn-secondary">추가</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table> 
+                  </div>
+                  <div class="card-footer d-md-flex">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">    
+                      <button type="submit" class="btn btn-secondary">미리보기</button>           
+                      <button type="submit" class="btn btn-primary">저장</button>
+                    </div>
+                  </div>
+                </div>                         
+              </div>
+              <div class="tab-pane fade" id="t3" role="tabpanel">                                
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="card-title col-sm-10">3. 보증관련</div>
+                      <div class="col-sm-2">                                                   
+                        <select class="form-select" id="validationCustom05">
+                          <option selected="" disabled="" value="">버전 선택</option>
+                          <option></option>
+                        </select>                
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">                    
+                    <table class="table table-form">
+                      <colgroup>
+                        <col style="width: 60%">
+                        <col style="width: auto">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th colspan="2">3-1. 보증공통</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 입찰보증신청서">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile0221">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile0221">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove21">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile02121">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile02121">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove121">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile02221">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile02221">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove221">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <button type="submit" class="btn btn-sm btn-secondary">추가</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>                    
+                    <table class="table table-form mt-4">
+                      <colgroup>
+                        <col style="width: 60%">
+                        <col style="width: auto">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th colspan="2">3-2. 입찰보증</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile02">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile02">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile021">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile021">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove1">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input class="form-control" value="(01) 신용평가 안내문">
+                          </td>
+                          <td>                   
+                            <div class="input-group">
+                              <input type="file" class="form-control" id="inputGroupFile022">
+                              <label class="input-group-text visually-hidden" for="inputGroupFile022">파일 선택</label>                              
+                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove2">X</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <button type="submit" class="btn btn-sm btn-secondary">추가</button>
                           </td>
                         </tr>
                       </tbody>
@@ -431,254 +654,21 @@
                   <div class="card-footer d-md-flex">
                     <div class="col-sm-6">
                     </div>
-                    <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">            
+                    <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">    
+                      <button type="submit" class="btn btn-secondary">미리보기</button>           
                       <button type="submit" class="btn btn-primary">저장</button>
                     </div>
                   </div>
                 </div>         
               </div>
-              <!--end::Col-->
+              <div class="tab-pane fade" id="t4" role="tabpanel">Content 4</div>
+              <div class="tab-pane fade" id="t5" role="tabpanel">Content 5</div>
+              <div class="tab-pane fade" id="t6" role="tabpanel">Content 6</div>
+              <div class="tab-pane fade" id="t7" role="tabpanel">Content 7</div>
+              <div class="tab-pane fade" id="t8" role="tabpanel">Content 8</div>
+              <div class="tab-pane fade" id="t9" role="tabpanel">Content 9</div>
+              <div class="tab-pane fade" id="t10" role="tabpanel">Content 10</div>
             </div>
-            <!--end::Row-->
-            <!--begin::Row-->
-            <div class="row">
-              <!--begin::Col-->
-              <div class="col-lg-12">      
-                <div class="card card-outline mb-4">
-                  <div class="card-header">
-                    <div class="row">
-                    <div class="card-title col-sm-10">신용등급</div>
-                    <div class="col-sm-2">                      
-                      <select class="form-select" id="validationCustom04">
-                        <option selected="" disabled="" value="">버전 선택</option>
-                        <option></option>
-                      </select>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="card-body">   
-                    <div class="col-md-12 mb-5">
-                      <button type="submit" class="btn btn-danger float-end mb-2">삭제</button>                 
-                      <table class="table table-form">
-                        <colgroup>
-                          <col style="width: 200px">
-                          <col style="width: 500px">
-                          <col style="width: 200px">
-                          <col style="width: auto">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                          <th>신용평가 기관 - 국문</th>
-                          <td><input class="form-control" value="무디스"></td>
-                          <th>신용평가 기관 - 영문</th>
-                          <td><input class="form-control" value="Moody's Ratings"></td>
-                        </tr>
-                        <tr>
-                          <th>신용평가 기관 로고</th>
-                          <td>                   
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile02">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile02">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove">X</button>
-                            </div>
-                            <small class="text-muted d-block mt-1">신용평가 기관 로고 이미지 설명</small>
-                          </td>
-                          <th>신용평가 기관 로고 이미지 설명</th>
-                          <td><input class="form-control" value="무디스 기관 로고"></td>
-                        </tr>
-                        <tr>
-                          <th>타이틀</th>
-                          <td colspan="3"><input class="form-control" value="2014년 국내 건설보증기관 최초로 국제신용등급을 취득"></td>
-                        </tr>
-                        <tr>
-                          <th>설명</th>
-                          <td colspan="3">
-                            <textarea class="form-control" rows="3">세계적 신용평가사 무디스(Moody’s)는 전문건설공제조합의 보증금지급능력(IFSR)에 ‘A3 안정적’ 등급을 부여했습니다. 조합은 2014년 국내 건설보증기관 최초로 국제신용등급을 취득한 이후, 현재까지 우수한 보증금·보험금 지급능력을 유지하고 있습니다.</textarea>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>등급</th>
-                          <td style="width:25%"><input class="form-control" value="A+"></td>
-                          <th>전망</th>
-                          <td><input class="form-control" value="안정적(Stable)"></td>
-                        </tr>
-                        <tr>
-                          <th>최종평가(검토)일</th>
-                          <td><input type="date" class="form-control" value="2025-06-10"></td>
-                          <th>발표자료</th>
-                          <td>                          
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile02">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile02">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove">X</button>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
-                    </div> 
-                    <div class="col-md-12">
-                      <button type="submit" class="btn btn-danger float-end mb-2">삭제</button>                 
-                      <table class="table table-form">
-                        <colgroup>
-                          <col style="width: 200px">
-                          <col style="width: 500px">
-                          <col style="width: 200px">
-                          <col style="width: auto">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                          <th>신용평가 기관 - 국문</th>
-                          <td><input class="form-control" value="무디스"></td>
-                          <th>신용평가 기관 - 영문</th>
-                          <td><input class="form-control" value="Moody's Ratings"></td>
-                        </tr>
-                        <tr>
-                          <th>신용평가 기관 로고</th>
-                          <td>                   
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile021">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile021">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove1">X</button>
-                            </div>
-                            <small class="text-muted d-block mt-1">신용평가 기관 로고 이미지 설명</small>
-                          </td>
-                          <th>신용평가 기관 로고 이미지 설명</th>
-                          <td><input class="form-control" value="무디스 기관 로고"></td>
-                        </tr>
-                        <tr>
-                          <th>타이틀</th>
-                          <td colspan="3"><input class="form-control" value="2014년 국내 건설보증기관 최초로 국제신용등급을 취득"></td>
-                        </tr>
-                        <tr>
-                          <th>설명</th>
-                          <td colspan="3">
-                            <textarea class="form-control" rows="3">세계적 신용평가사 무디스(Moody’s)는 전문건설공제조합의 보증금지급능력(IFSR)에 ‘A3 안정적’ 등급을 부여했습니다. 조합은 2014년 국내 건설보증기관 최초로 국제신용등급을 취득한 이후, 현재까지 우수한 보증금·보험금 지급능력을 유지하고 있습니다.</textarea>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>등급</th>
-                          <td style="width:25%"><input class="form-control" value="A+"></td>
-                          <th>전망</th>
-                          <td><input class="form-control" value="안정적(Stable)"></td>
-                        </tr>
-                        <tr>
-                          <th>최종평가(검토)일</th>
-                          <td><input type="date" class="form-control" value="2025-06-10"></td>
-                          <th>발표자료</th>
-                          <td>                          
-                            <div class="input-group">
-                              <input type="file" class="form-control" id="inputGroupFile022">
-                              <label class="input-group-text visually-hidden" for="inputGroupFile022">파일 선택</label>                              
-                              <button class="btn btn-xs btn-outline-secondary" id="file1Remove2">X</button>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="card-footer d-md-flex">
-                      <div class="col-sm-6">
-                        <button type="submit" class="btn btn-secondary">추가</button>
-                      </div>
-                      <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">                        
-                        <button type="submit" class="btn btn-secondary">미리보기</button>
-                        <button type="submit" class="btn btn-primary">저장</button>
-                      </div>
-                  </div>
-                </div>         
-              </div>
-              <!--end::Col-->
-            </div>
-            <!--end::Row-->
-            <!--begin::Row-->
-            <div class="row">
-              <!-- Start col -->
-              <div class="col-lg-12">
-                <!-- 예치기준금액 섹션 -->                  
-                <div class="card card-outline mb-4">
-                  <div class="card-header">
-                    <div class="row">
-                    <div class="card-title col-sm-10">예치기준금액</div>
-                    <div class="col-sm-2">                      
-                      <select class="form-select" id="validationCustom044">
-                        <option selected="" disabled="" value="">버전 선택</option>
-                        <option></option>
-                      </select>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table table-bordered m-0 table-grid" id="tbl">
-                        <thead class="thead-light">
-                          <tr>
-                            <th style="width:18%">업종</th>
-                            <th style="width:12%">법인/개인</th>
-                            <th style="width:12%">신용등급</th>
-                            <th style="width:10%">좌수</th>
-                            <th style="width:18%">1좌당 금액</th>
-                            <th>예치금</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>지반포장외</td><td>법인/개인</td><td>C</td>
-                            <td class="num">53</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="50,418,582"></td>
-                          </tr>
-                          <tr>
-                            <td>철도, 강구조</td><td>법인/개인</td><td>CC이상</td>
-                            <td class="num">43</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="40,905,642"></td>
-                          </tr>
-                          <tr>
-                            <td>개인</td><td>개인</td><td>C</td>
-                            <td class="num">106</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="100,837,164"></td>
-                          </tr>
-                          <tr>
-                            <td>시설물</td><td>법인/개인</td><td>C</td>
-                            <td class="num">79</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="75,152,226"></td>
-                          </tr>
-                          <tr>
-                            <td>가스누방</td><td>법인/개인</td><td>-</td>
-                            <td class="num">43</td>
-                            <td><input class="form-control num seat-amount" value="951,294"></td>
-                            <td><input class="form-control num dep" value="40,905,642"></td>
-                          </tr>
-                        </tbody>
-                      </table>     
-                    </div>                 
-                    <div class="form-row d-md-flex gap-sm-2 mt-3">
-                      <div class="form-group col-sm-6 col-md-3">
-                        <label class="form-label">1좌당 금액</label>
-                        <input id="globalSeatAmount" class="form-control num" value="951,294">
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3">
-                        <label class="form-label">적용 일자</label>
-                        <input type="date" class="form-control" value="2025-01-01">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer d-md-flex">
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-6 d-md-flex justify-content-md-end gap-md-2">            
-                      <button type="submit" class="btn btn-primary">저장</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.Start col -->
-            </div>
-            <!-- /.row (main row) -->
           </div>
           <!--end::Container-->
         </div>

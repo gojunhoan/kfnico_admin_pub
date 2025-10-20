@@ -350,11 +350,12 @@ sup {
 }
 
 a {
-  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  color: #000;
   text-decoration: underline;
 }
 a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+  font-weight: 700;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -2968,6 +2969,7 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-bg);
   box-shadow: var(--bs-btn-box-shadow);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  white-space: nowrap;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -4737,6 +4739,7 @@ textarea.form-control-lg {
   display: flex;
   padding-left: 0;
   list-style: none;
+  gap: .25rem;
 }
 
 .page-link {
@@ -14411,7 +14414,8 @@ html.maximized-card {
   float: left;
   margin: 0;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 700;
+  line-height: 2.375rem;
 }
 
 .btn-tool {
@@ -14506,6 +14510,11 @@ html.maximized-card {
 .card-body > .table > thead > tr > th,
 .card-body > .table > thead > tr > td {
   border-top-width: 0;
+  text-align: center;
+}
+
+.card-body > .table > thead > tr > th {
+  background-color: #f8f9fa;
 }
 
 .table:not(.table-dark) {
@@ -15617,7 +15626,10 @@ fieldset legend {
   }
 }
 
-/* 공통 */
+/* 공통 - 추가 */
+.table-form {  
+  border-top: 0.15rem solid var(--bs-table-color);
+}
 .table-form td,
 .table-form th {
   vertical-align:middle;
@@ -15635,11 +15647,20 @@ fieldset legend {
   background:#f8f9fa;
   font-weight:600;
 }
-.btn-file{position:relative;overflow:hidden}
-.btn-file input[type=file]{position:absolute;top:0;right:0;min-width:100%;min-height:100%;opacity:0;cursor:pointer}
-.file-pill{display:flex;gap:.5rem;align-items:center}
-.file-pill .badge{font-weight:500}
-.section-dashed{border:2px dashed #ff9f43;border-radius:.5rem;padding:1rem;margin-top:1rem}
-.num{text-align:right}
+.table-grid {
+  border-top: 0.15rem solid var(--bs-table-color);
+}
 .table-grid th,.table-grid td{vertical-align:middle}
-.table-grid th{white-space:nowrap}
+.table-grid th{
+  background-color: #f8f9fa;
+  text-align: center;  
+  white-space:nowrap;
+}
+.table-grid td:first-child,
+.table-grid th:first-child {
+  border-left: 0;
+}
+.table-grid td:last-child,
+.table-grid th:last-child {
+  border-right: 0;
+}
